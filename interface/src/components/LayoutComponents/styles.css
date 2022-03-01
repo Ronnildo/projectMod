@@ -1,0 +1,27 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+/*cor de fundo*/
+.container-login{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    background-color: #5AADF1;
+}
+/*container central com as informações*/
+.wrap-login{
+    width: 390px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+}
