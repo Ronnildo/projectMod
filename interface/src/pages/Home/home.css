@@ -43,3 +43,45 @@ body, html{
     top: 350px;
     
 }
+
+.log{
+  z-index: 1;
+  background-color: blue;
+  position: absolute;
+  top: 1%;
+}
+
+h1{
+  position: absolute;
+  width: 560px;
+  height: 82px;
+  left: 60px;
+  top: 170px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 95px;
+  text-align: center;
+  letter-spacing: 0.13em;
+
+  color: #FFFFFF;
+}
+
+p{
+  position: absolute;
+  width: 676px;
+  height: 192px;
+  left: 100px;
+  top: 400px;
+
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.13em;
+
+  color: #FFFFFF;
+
+}
