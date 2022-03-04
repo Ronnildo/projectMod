@@ -46,9 +46,38 @@ body, html{
 
 .log{
   z-index: 1;
-  background-color: blue;
+  background: #5AADF1;
+  color: #FFFFFF;
   position: absolute;
+
+  width: 130px;
+  height: 30px;
+
+  border: none;
+  border-radius: 5px;
+
   top: 1%;
+  left: 79%;
+
+  cursor: pointer;
+}
+
+.logtwo{
+  z-index: 1;
+  background: #5AADF1;
+  color: #FFFFFF;
+  position: absolute;
+
+  width: 130px;
+  height: 30px;
+
+  border: none;
+  border-radius: 5px;
+
+  top: 1%;
+  left: 90%;
+
+  cursor: pointer;
 }
 
 h1{

@@ -51,7 +51,7 @@ export const Register = () => {
 
         {/*div para o botão*/}
         <div className="container-login-form-btn">
-          <button className="login-form-btn">Login</button>
+          <button className="login-form-btn">Cadastrar</button>
         </div>
 
         {/*div (não possui conta?)*/}
