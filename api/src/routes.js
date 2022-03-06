@@ -1,8 +1,11 @@
 const { Router } = require('express');
 const express = require('express');
-const User = require('./app/models/User');
 
-const UserController = require('./app/controllers/UserController');
+const UserController = require('./app/controllers/UserController')
+const LoginController = require('./app/controllers/loginController');
+
+const AuthMiddleware = require('./app/middlewares/auth');
+const JogosController = require('./app/controllers/JogosController');
 
 const app = express();
 app.use(express.json());
@@ -14,6 +17,13 @@ routes.get('/', (req, res) => {
 });
 
 routes.post('/users', UserController.store);
+routes.post("/login", LoginController.store);
+
+routes.post('/jogos', JogosController.store);
+
+routes.use(AuthMiddleware);
+
 routes.get('/users', UserController.index);
+routes.put('/users', UserController.update);
 
 module.exports = routes;

@@ -1,12 +1,10 @@
 require('dotenv').config();
 
-const { DATABASE_HOST, DATABASE_PASSWORD, DATABASE_USERNAME } = process.env;
-
 module.exports = {
-    username: DATABASE_USERNAME,
-    password: DATABASE_PASSWORD,
+    username: "postgres",
+    password: "123456",
     database: "projectBd",
-    host: DATABASE_HOST,
+    host: "172.17.0.3",
     dialect: "postgres",
     define: {
         timestamps: true,
