@@ -6,31 +6,33 @@ import "./home.css";
 
 export const Home = () => {
   return (
-    <div className="container">
-      <div className="containers"></div>
-      <div className="images">
+    <div>
+      <span className="barra"></span>
+
+      <div className="butt">
         <Link className="" to="/login">
-          <button to="/login" className="log">
-            Login
-          </button>
+          <button className="logone">Login</button>
         </Link>
         <Link className="" to="/register">
-          <button to="/login" className="logtwo">
+          <button  className="logtwo">
             Cadastro
           </button>
         </Link>
-        <span className="images-img">
-          <h1>
+      </div>
+
+      <div className="images-img">
+          <h1 className="texto1">
             AGENDA <br /> FUTEBOL
           </h1>
           <br />
-          <p>
+          <p className="texto">
             PARA MANTER-SE SEMPRE ATUALIZADO DE TODOS OS JOGOS DE SEUS
             CAMPEONATOS
           </p>
           <img src={soccerIMG} alt="" />
-        </span>
-      </div>
+        </div>
+
+
     </div>
   );
 };
