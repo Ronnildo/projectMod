@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2? family = Josefin + Sans: wght @ 100; 300; 600 & family = Aberto + Sans: wght @ 300; 400; 700 & family = Titillium + Web: wght @ 200 & display = swap ");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #5AADF1;
+}
+
+.container{
+  margin: 0 auto;
+  position: absolute;
+  width: 65%;
+  height: 250px;
+  left: 20%;
+  top: 150px;
+
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+.container-card{
+  position: relative;
+  width: 55%;
+  height: 215px;
+  left: 42%;
+  top: 16px;
+
+  background: #5AADF1;
+  border-radius: 10px;
+}
+.del{
+  position: relative;
+  width: 80px;
+  height: 35px;
+  left: 80%;
+  top: 120px;
+
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  border: none;
+  cursor: pointer;
+}
+.del:hover{
+  opacity: 0.5;
+}
