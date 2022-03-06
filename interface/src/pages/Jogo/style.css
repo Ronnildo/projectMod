@@ -9,13 +9,32 @@ body, html{
     font-family: 'Josefin Sans', sans-serif;
     background-color: #5AADF1;
 }
-
+.fut{
+  position: relative;
+  font-size: 35px;
+  left: 10%;
+  top: 50px;
+}
+.fut2{
+  position: absolute;
+  font-size: 35px;
+  left: 30%;
+  top: 50px;
+}
+.pen{
+  position: relative;
+  font-size: 17px;
+  left: 1%;
+}
+.penn{
+  cursor: pointer;
+}
 .container{
   margin: 0 auto;
   position: absolute;
-  width: 65%;
+  width: 80%;
   height: 250px;
-  left: 20%;
+  left: 12%;
   top: 150px;
 
   background: #FFFFFF;
@@ -26,17 +45,20 @@ body, html{
   width: 55%;
   height: 215px;
   left: 42%;
-  top: 16px;
+  top: -20px;
 
   background: #5AADF1;
   border-radius: 10px;
+}
+.txt{
+  margin-top: 1px;
 }
 .del{
   position: relative;
   width: 80px;
   height: 35px;
-  left: 80%;
-  top: 120px;
+  left: 83%;
+  top: -25px;
 
   background: #FFFFFF;
   border-radius: 10px;
@@ -45,5 +67,16 @@ body, html{
   cursor: pointer;
 }
 .del:hover{
-  opacity: 0.5;
+  opacity: 0.8;
+}
+#caixa{
+  position: relative;
+  left: 30%;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 50%;
 }
