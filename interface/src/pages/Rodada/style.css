@@ -9,81 +9,194 @@ body, html{
     font-family: 'Josefin Sans', sans-serif;
     background-color: #5AADF1;
 }
+.barra{
+  position: absolute;
+  width: 100%;
+  height: 6.5vh;
+  left: 0px;
+  top: 0px;
 
-.logcad{
-    background: #5AADF1;
-    color: #FFFFFF;
-    position: absolute;
-  
-    width: 150px;
-    height: 30px;
-  
-    border: none;
-    border-radius: 5px;
-  
-    top: 1%;
-    left: 88%;
-  
-    cursor: pointer;
+  background-color: white;
 }
-.logcad:hover{
-    opacity: 0.8;
-}
+.cadjogo{
+  background: #5AADF1;
+  color: #FFFFFF;
+  position: absolute;
 
-.del{
-    position: relative;
-    width: 80px;
-    height: 35px;
-    left: 80%;
-    top: -25px;
-  
-    background: #FFFFFF;
-    border-radius: 10px;
-  
-    border: none;
-    cursor: pointer;
+  width: 150px;
+  height: 30px;
+
+  border: none;
+  border-radius: 5px;
+
+  top: 15%;
+  left: 85%;
+
+  cursor: pointer;
 }
-.del:hover{
-    opacity: 0.8;
+.cadjogo:hover{
+  opacity: 0.8;
 }
 
-#caixaa{
-    position: relative;
-    left: 10%;
-    transform: translate(-50%);
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    border-radius: 5px;
-    width: 16%;
-    background-color: rgb(189, 189, 189);
-  }
+.containerss{
+  position: absolute;
+  width: 50%;
+  height: 72vh;
+  left: 25%;
+  top: 136px;
 
-  .spa{
-    position: absolute;
-    width: 100%;
-    background-color: white;
-    height: 7vh;
-  }
+  background: #ffffff;
+  border-radius: 10px;
+}
+.icones{
+  position: absolute;
+  background: rgb(255, 255, 255);
+  left: 30%;
+  width: 10%;
+}
+.fut2{
+  position: relative;
+  display: flex;
+  top: 11px;
+  left: 320%;
+}
 
-  .time1{
-    display: flex;
-    position: relative;
-    top: 81px;
-  }
+.formulario{
+  margin-top: -75px;
+}
+.caddel{
+  background: #5AADF1;
+  color: #FFFFFF;
+  position: absolute;
+
+  width: 100px;
+  height: 40px;
+
+  border: none;
+  border-radius: 5px;
+
+  top: 420px;
+  left: 53%;
+
+  cursor: pointer;
+}
+.caddel:hover{
+  opacity: 0.8;
+}
+
+#horario{
+  background-color: #b6b6b696;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 35%;
+}
+#local{
+  background-color: #b6b6b696;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 35%;
+}
+#data{
+  background-color: #b6b6b696;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 35%;
+}
+
+#casa{
+  z-index: 1;
+  background-color: #b6b6b696;
+  position: relative;
+  left: 41.5%;
+  top: 250px;
+  text-align: center;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 13%;
+}
+#fora{
+  z-index: 1;
+  background-color: #b6b6b696;
+  position: relative;
+  left: 57.5%;
+  top: 203px;
+  text-align: center;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 12%;
+}
+P{
+  z-index: 1;
+  position: absolute;
+  left: 49.1%;
+  top: 255.5px;
   
-  .time2{
-    display: flex;
-    position: relative;
-    left: 21%;
-    top: 45px;
-  }
+}
+.times{
+left: 50%;
+}
 
-  p{
-    position: absolute;
-    font-size: 25px;
-    color: black;
-    top: 125px;
-    left: 19.5%;
-  }
+.pen{
+  z-index: 1;
+  position: relative;
+  left: 76%;
+  top: 5px;
+
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  background-color: transparent;
+}
+.pen2{
+  z-index: 1;
+  position: relative;
+  left: 79%;
+  top: 5px;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+}
+.pen3{
+  z-index: 1;
+  position: relative;
+  left: 80%;
+  top: 5px;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+}
+
