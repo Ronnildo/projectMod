@@ -56,6 +56,9 @@ export const Jogo = () => {
             <button className="ok">Ok</button>
           </div>
         </div>
+
+        <span></span>
+
       </div>
     </div>
   );
