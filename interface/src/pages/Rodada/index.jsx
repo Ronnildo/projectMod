@@ -7,25 +7,24 @@ import React from "react";
 import "./style.css";
 
 export default class Rodada extends React.Component {
+  
   state = {
-    jogos: [],
-  };
-
-  get() {
-    const url = "http://localhost:3333/jogos";
-
-    axios
-      .get(url)
-      .then((res) => {
-        const jogos = res.data;
-        this.setState({ jogos });
-        console.log(jogos);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    jogos: []
   }
 
+  get(){
+    const url = "http://localhost:3333/jogos";
+
+    axios.get(url)
+    .then((res) => {
+      const jogos = res.data;
+      this.setState({jogos});
+      console.log(jogos)
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+  
   render() {
     return (
       <div className="barra">

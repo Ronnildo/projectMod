@@ -5,7 +5,6 @@ import  Register  from '../Register'
 import  Jogo  from '../Jogo'
 import  Rodada  from '../Rodada'
 
-
 export const AppRouter = () => {
   return (
     <Router>

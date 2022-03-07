@@ -98,11 +98,10 @@ export default class Jogo extends React.Component {
                 <input type="text" onChange={this.handleChangeLocal} name="" id="local" placeholder="Local" />
                
               </div>
-
-              <button className="cancel">Cancelar</button>
               <Link to="/rodada">
                 <button className="ok">Ok</button>
               </Link>
+              <button className="cancel">Cancelar</button>
             </div>
           </div>
 
