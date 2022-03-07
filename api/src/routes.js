@@ -19,11 +19,14 @@ routes.get('/', (req, res) => {
 routes.post('/users', UserController.store);
 routes.post("/login", LoginController.store);
 
-routes.post('/jogos', JogosController.store);
-
 routes.use(AuthMiddleware);
 
 routes.get('/users', UserController.index);
 routes.put('/users', UserController.update);
+
+routes.post('/jogos', JogosController.store);
+routes.get('/jogos', JogosController.index);
+routes.put('/jogos/:jogo_id', JogosController.update);
+routes.delete('/:jogo_id/jogos', JogosController.delete)
 
 module.exports = routes;
