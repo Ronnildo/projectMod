@@ -3,7 +3,12 @@ import { Home } from '../Home'
 import  Login  from '../Login'
 import  Register  from '../Register'
 import  Jogo  from '../Jogo'
+<<<<<<< HEAD
 import  Rodada  from '../Rodada'
+=======
+import  Cadast  from '../Cadast'
+
+>>>>>>> 8204970267ddf92c936942a351c0892846e142fa
 
 export const AppRouter = () => {
   return (
