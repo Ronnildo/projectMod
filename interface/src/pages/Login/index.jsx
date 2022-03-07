@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
 import { LayoutComponents } from "../../components/LayoutComponents";
 import React from "react";
 import axios from "axios";
@@ -11,7 +11,6 @@ export default class Login extends React.Component {
   };
 
   handleSingIn = async (e) => {
-    e.preventDefault();
 
     let url = "http://localhost:3333/login";
 

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "../Home";
-import Login from "../Login";
-import Register from "../Register";
-import { Jogo } from "../Jogo";
-import { Cadast } from "../Cadast";
-=======
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { Home } from '../Home'
-import { Login } from '../Login'
+import  Login  from '../Login'
 import  Register  from '../Register'
 import  Jogo  from '../Jogo'
-import  Cadast  from '../Cadast'
->>>>>>> origin
+import  Rodada  from '../Rodada'
 
 export const AppRouter = () => {
   return (
@@ -22,7 +13,7 @@ export const AppRouter = () => {
         <Route path="/register" exact element={<Register />} />
         <Route path="/home" exact element={<Home />} />
         <Route path="/jogo" exact element={<Jogo />} />
-        <Route path="/cadast" exact element={<Cadast />} />
+        <Route path="/rodada" exact element={<Rodada />} />
       </Routes>
     </Router>
   );

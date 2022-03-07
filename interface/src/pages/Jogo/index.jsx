@@ -12,21 +12,22 @@ export default class Jogo extends React.Component {
   state = {
     casa: "",
     fora: "",
+    data: "",
     horario: "",
     local: "",
-    data: "",
   };
 
   handleSubmit = async (event) => {
+    event.preventDefault()
 
-    let url = "http://localhost:3333/users";
+    let url = "http://localhost:3333/jogos";
 
     const data = {
       casa: this.state.casa,
       fora: this.state.fora,
+      data: this.state.data,
       horario: this.state.horario,
       local: this.state.local,
-      data: this.state.data
     };
 
     console.log(data);
@@ -37,7 +38,6 @@ export default class Jogo extends React.Component {
         console.log(res.data);
       })
       .catch((err) => {
-        alert("Email já cadastrado!");
         console.log(err);
       });
   }
@@ -72,10 +72,10 @@ export default class Jogo extends React.Component {
           <FaFutbol className="fut2"></FaFutbol>
           <p>X</p>
           <div className="time1">
-            <input type="text" name="" id="casa" placeholder="casa" />
+            <input type="text" onChange={this.handleChangeCasa} name="" id="casa" placeholder="casa" />
           </div>
           <div className="time2">
-            <input type="text" name="" id="fora" placeholder="fora" />
+            <input type="text" onChange={this.handleChangeFora} name="" id="fora" placeholder="fora" />
           </div>
 
           <div className="container-card">
@@ -83,30 +83,24 @@ export default class Jogo extends React.Component {
               <br />
 
               <div className="caixa1">
-                <input type="text" name="" id="horario" placeholder="Horário" />
-                <button className="penn">
-                  <FaPen className="pen"></FaPen>
-                </button>
+                <input type="text" onChange={this.handleChangeData} name="" id="data" placeholder="Data" />
+                
               </div>
               <br />
 
               <div className="caixa2">
-                <input type="text" name="" id="local" placeholder="Local" />
-                <button className="penn">
-                  <FaPen className="pen"></FaPen>
-                </button>
+                <input type="text" onChange={this.handleChangeHorario} name="" id="horario" placeholder="Horário" />
+                
               </div>
               <br />
 
               <div className="caixa3">
-                <input type="text" name="" id="data" placeholder="Data" />
-                <button className="penn">
-                  <FaPen className="pen"></FaPen>
-                </button>
+                <input type="text" onChange={this.handleChangeLocal} name="" id="local" placeholder="Local" />
+               
               </div>
 
               <button className="cancel">Cancelar</button>
-              <Link to="/cadast">
+              <Link to="/rodada">
                 <button className="ok">Ok</button>
               </Link>
             </div>
