@@ -20,8 +20,6 @@ module.exports = async(req, res, next) => {
 
         req.userId = dec.id;
         req.name = dec.name;
-        console.log("User Id: " + dec.id);
-        console.log("name: " + dec.name);
         next();
     });
 }
