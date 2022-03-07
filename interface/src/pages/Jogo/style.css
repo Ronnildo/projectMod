@@ -105,7 +105,7 @@ body, html{
   opacity: 0.8;
 }
 
-#caixa{
+#horario{
   position: relative;
   left: 30%;
   transform: translate(-50%);
@@ -116,7 +116,29 @@ body, html{
   border-radius: 5px;
   width: 50%;
 }
-#caixaa{
+#local{
+  position: relative;
+  left: 30%;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 50%;
+}
+#data{
+  position: relative;
+  left: 30%;
+  transform: translate(-50%);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 50%;
+}
+#casa{
   position: relative;
   left: 10%;
   transform: translate(-50%);
@@ -128,6 +150,19 @@ body, html{
   width: 16%;
   background-color: rgb(189, 189, 189);
 }
+#fora{
+  position: relative;
+  left: 10%;
+  transform: translate(-50%);
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 16%;
+  background-color: rgb(189, 189, 189);
+}
+
 .time1{
   display: flex;
   position: relative;
