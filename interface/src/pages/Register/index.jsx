@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
 import { LayoutComponents } from "../../components/LayoutComponents";
 import axios from "axios";
 
@@ -34,7 +34,7 @@ export default class Register extends React.Component {
         console.log(res.data);
       })
       .catch((err) => {
-        alert("Email já cadastrado!")
+        alert("Email já cadastrado!");
         console.log(err);
       });
   };
@@ -56,7 +56,6 @@ export default class Register extends React.Component {
           {/*classe para estilo do no login */}
           <span className="login-form-title">Cadastro</span>
           <br />
-          <br />
           {/*div para as caixas de texto*/}
           <div className="wrap-input">
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
@@ -67,10 +66,10 @@ export default class Register extends React.Component {
               //value={formValue.name}
               onChange={this.handleChangeName}
               //onChange={(e) => setName(e.target.value)}
+              placeholder="Nome"
             />
-            <span className="focus-input" data-placeholder="Nome"></span>
           </div>
-
+          <br />
           {/*div para as caixas de texto*/}
           <div className="wrap-input">
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
@@ -81,10 +80,10 @@ export default class Register extends React.Component {
               //value={formValeu.email}
               onChange={this.handleChangeEmail}
               //onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
             />
-            <span className="focus-input" data-placeholder="Email"></span>
           </div>
-
+          <br />
           <div className="wrap-input">
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
             <input
@@ -94,15 +93,16 @@ export default class Register extends React.Component {
               //value={formValue.password}
               onChange={this.handleChangePassword}
               //onChange={(e) => setPassword(e.target.value)}
+              placeholder="Senha"
             />
-            <span className="focus-input" data-placeholder="Passaword"></span>
           </div>
-
+          <br />
           {/*div para o botão*/}
-          <div className="container-login-form-btn">
+          <Link className="" to="/jogo">
             <button className="login-form-btn">Cadastrar</button>
-          </div>
+          </Link>
 
+          <br />
           {/*div (não possui conta?)*/}
           <div className="text">
             <span className="text1">Já possui conta?</span>
