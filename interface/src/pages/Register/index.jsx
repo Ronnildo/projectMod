@@ -30,8 +30,9 @@ export default class Register extends React.Component {
     axios
       .post(url, data)
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
+        console.log(res.status);
+        alert("Usuário cadastrado!")
+        //console.log(res.data);
       })
       .catch((err) => {
         alert("Email já cadastrado!");
@@ -61,11 +62,8 @@ export default class Register extends React.Component {
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
             <input
               id="name"
-              //className={name !== "" ? "has-val input" : "input"}
               type="name"
-              //value={formValue.name}
               onChange={this.handleChangeName}
-              //onChange={(e) => setName(e.target.value)}
               placeholder="Nome"
             />
           </div>
@@ -75,11 +73,8 @@ export default class Register extends React.Component {
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
             <input
               id="email"
-              //className={email !== "" ? "has-val input" : "input"}
               type="email"
-              //value={formValeu.email}
               onChange={this.handleChangeEmail}
-              //onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
             />
           </div>
@@ -88,17 +83,14 @@ export default class Register extends React.Component {
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
             <input
               id="password"
-              // className={password !== "" ? "has-val input" : "input"}
               type="password"
-              //value={formValue.password}
               onChange={this.handleChangePassword}
-              //onChange={(e) => setPassword(e.target.value)}
               placeholder="Senha"
             />
           </div>
           <br />
           {/*div para o botão*/}
-          <Link className="" to="/jogo">
+          <Link className="" onClick={this.handleSubmit} to="/jogo">
             <button className="login-form-btn">Cadastrar</button>
           </Link>
 
