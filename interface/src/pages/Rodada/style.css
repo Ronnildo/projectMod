@@ -59,6 +59,7 @@ body, html{
   display: flex;
   top: 11px;
   left: 320%;
+  font-size: 35px;
 }
 
 .formulario{
@@ -126,7 +127,7 @@ body, html{
   background-color: #b6b6b696;
   position: relative;
   left: 41.5%;
-  top: 250px;
+  top: 220px;
   text-align: center;
   transform: translate(-50%);
   padding: 15px;
@@ -141,7 +142,7 @@ body, html{
   background-color: #b6b6b696;
   position: relative;
   left: 57.5%;
-  top: 203px;
+  top: 173px;
   text-align: center;
   transform: translate(-50%);
   padding: 15px;
