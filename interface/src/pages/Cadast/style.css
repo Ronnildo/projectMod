@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2? family = Josefin + Sans: wght @ 100; 300; 600 & family = Aberto + Sans: wght @ 300; 400; 700 & family = Titillium + Web: wght @ 200 & display = swap ");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #5AADF1;
+}
+
+.logcad{
+    background: #5AADF1;
+    color: #FFFFFF;
+    position: absolute;
+  
+    width: 150px;
+    height: 30px;
+  
+    border: none;
+    border-radius: 5px;
+  
+    top: 1%;
+    left: 88%;
+  
+    cursor: pointer;
+}
+.logcad:hover{
+    opacity: 0.8;
+}
+
+.del{
+    position: relative;
+    width: 80px;
+    height: 35px;
+    left: 80%;
+    top: -25px;
+  
+    background: #FFFFFF;
+    border-radius: 10px;
+  
+    border: none;
+    cursor: pointer;
+}
+.del:hover{
+    opacity: 0.8;
+}
+
+#caixaa{
+    position: relative;
+    left: 10%;
+    transform: translate(-50%);
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 16%;
+    background-color: rgb(189, 189, 189);
+  }
+
+  .spa{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    height: 7vh;
+  }
+
+  .time1{
+    display: flex;
+    position: relative;
+    top: 81px;
+  }
+  
+  .time2{
+    display: flex;
+    position: relative;
+    left: 21%;
+    top: 45px;
+  }
+
+  p{
+    position: absolute;
+    font-size: 25px;
+    color: black;
+    top: 125px;
+    left: 19.5%;
+  }

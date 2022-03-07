@@ -1,21 +1,20 @@
 import { FaFutbol } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
 import { Link } from "react-router-dom";
-//import { NavLink } from "react-router-dom";
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import "./style.css";
 
-export const Jogo = () => {
+export const Cadast = () => {
   return (
     <div>
       <span className="spa"></span>
 
-      <Link className="" to="/home">
-        <button className="loghome">Home</button>
+      <Link className="" to="/jogo">
+        <button className="logcad">Cadastrar</button>
       </Link>
 
       <div className="container">
-        <FaFutbol className="fut"></FaFutbol> 
+        <FaFutbol className="fut"></FaFutbol>
         <FaFutbol className="fut2"></FaFutbol>
         <p>X</p>
         <div className="time1">
@@ -52,13 +51,9 @@ export const Jogo = () => {
               </button>
             </div>
 
-            <button className="cancel">Cancelar</button>
-            <button className="ok">Ok</button>
+            <button className="del">Deletar</button>
           </div>
         </div>
-
-        <span></span>
-
       </div>
     </div>
   );
