@@ -7,24 +7,29 @@ import React from "react";
 import "./style.css";
 
 export default class Rodada extends React.Component {
-  
   state = {
-    jogos: []
-  }
+    jogos: [],
+  };
 
-  get(){
+  get() {
     const url = "http://localhost:3333/jogos";
 
-    axios.get(url)
-    .then((res) => {
-      const jogos = res.data;
-      this.setState({jogos});
-      console.log(jogos)
-    }).catch((err) => {
-      console.log(err);
-    })
+    axios
+      .get(url)
+      .then((res) => {
+        const jogos = res.data;
+        this.setState({ jogos });
+        console.log(jogos);
+      })
+      .catch((err) => {
+        if(err.response){
+          console.log(err.response.data);
+          window.alert("Email/senha incorretos")
+        }
+        console.log(err.res);
+      });
   }
-  
+
   render() {
     return (
       <div className="barra">
@@ -34,13 +39,17 @@ export default class Rodada extends React.Component {
           </Link>
         </span>
 
-          <div className="times">
-            <p id="casa">Casa</p>
-            <p>X</p>
-            <p id="fora">Fora</p>
-          </div>
+        <div className="times">
+          <p id="casa">
+            {this.state.jogos.map((jogo) => (
+              <p>{jogo.casa}</p>
+            ))}
+          </p>
+          <p>X</p>
+          <p id="fora">Fora</p>
+        </div>
 
-        <form action="" className="containerss">         
+        <form action="" className="containerss">
           <div className="icones">
             <FaFutbol className="fut"></FaFutbol>
             <FaFutbol className="fut2"></FaFutbol>
@@ -48,21 +57,29 @@ export default class Rodada extends React.Component {
 
           <div className="formulario">
             <p id="horario">
-              Horáio
-              <button className="pen"><FaPen></FaPen></button>
-            </p><br />
+              Horáiro
+              <button className="pen">
+                <FaPen></FaPen>
+              </button>
+            </p>
+            <br />
             <p id="local">
               Local
-            <button className="pen2"><FaPen></FaPen></button>
-            </p><br />
+              <button className="pen2">
+                <FaPen></FaPen>
+              </button>
+            </p>
+            <br />
             <p id="data">
               Data
-            <button className="pen3"><FaPen></FaPen></button>
-            </p><br />
-                        
-             <button className="caddel">Deletar</button>
+              <button className="pen3">
+                <FaPen></FaPen>
+              </button>
+            </p>
+            <br />
+
+            <button className="caddel">Deletar</button>
           </div>
-          
         </form>
       </div>
     );

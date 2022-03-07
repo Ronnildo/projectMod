@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { LayoutComponents } from "../../components/LayoutComponents";
 import React from "react";
 import axios from "axios";
+import authService from '../../services/auth';
 
 export default class Login extends React.Component {
   state = {
@@ -11,6 +12,7 @@ export default class Login extends React.Component {
   };
 
   handleSingIn = async (e) => {
+    //e.preventDefault()
 
     let url = "http://localhost:3333/login";
 
@@ -18,14 +20,15 @@ export default class Login extends React.Component {
       email: this.state.email,
       password: this.state.password,
     };
-    axios
-      .post(url, data)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    try {
+      let res = await authService.autheticate(data);
+      console.log("res", res.data);
+      authService.setLoggedUser(res.data);
+      this.props.history
+    } catch (err) {
+      console.log(err);
+      alert("Erro ao efetuar login")
+    }
   };
 
   handleChangeEmail = (event) => {
@@ -69,7 +72,7 @@ export default class Login extends React.Component {
           </div>
           <br />
           {/*div para o botão*/}
-          <Link to="/jogo">
+          <Link onClick={this.handleSingIn} to="/rodada">
             <button className="login-form-btn">Login</button>
           </Link>
           <br />

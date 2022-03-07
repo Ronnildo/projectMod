@@ -27,17 +27,21 @@ export default class Register extends React.Component {
     };
 
     console.log(data);
-    axios
-      .post(url, data)
-      .then((res) => {
-        console.log(res.status);
-        alert("Usuário cadastrado!")
-        //console.log(res.data);
-      })
-      .catch((err) => {
-        alert("Email já cadastrado!");
-        console.log(err);
-      });
+    try {
+      const res = await axios
+        .post(url, data)
+        .then((res) => {
+          console.log(res.status);
+          alert("Usuário cadastrado!");
+          //console.log(res.data);
+        })
+        .catch((err) => {
+          alert("Email já cadastrado!");
+          console.log(err);
+        });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   handleChangeName = (event) => {
