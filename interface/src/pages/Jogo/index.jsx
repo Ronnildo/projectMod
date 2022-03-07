@@ -8,7 +8,6 @@ import React from "react";
 import axios from "axios";
 
 export default class Jogo extends React.Component {
-
   state = {
     casa: "",
     fora: "",
@@ -18,7 +17,7 @@ export default class Jogo extends React.Component {
   };
 
   handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     let url = "http://localhost:3333/jogos";
 
@@ -40,7 +39,7 @@ export default class Jogo extends React.Component {
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
 
   handleChangeCasa = (event) => {
     this.setState({ casa: event.target.value });
@@ -51,9 +50,7 @@ export default class Jogo extends React.Component {
   handleChangeData = (event) => {
     this.setState({ data: event.target.value });
   };
-  handleChangeData = (event) => {
-    this.setState({ data: event.target.value });
-  };
+
   handleChangeHorario = (event) => {
     this.setState({ horario: event.target.value });
   };
@@ -70,44 +67,61 @@ export default class Jogo extends React.Component {
         </Link>
 
         <div className="container">
-          <FaFutbol className="fut"></FaFutbol>
-          <FaFutbol className="fut2"></FaFutbol>
-          <p>X</p>
-          <div className="time1">
-            <input type="text" onChange={this.handleChangeCasa} name="" id="casa" placeholder="casa" />
-          </div>
-          <div className="time2">
-            <input type="text" onChange={this.handleChangeFora} name="" id="fora" placeholder="fora" />
+          <div className="times">
+            <FaFutbol className="fut"></FaFutbol>
+            <FaFutbol className="futtwo"></FaFutbol>
+            <p>X</p>
+            <input
+              type="text"
+              onChange={this.handleChangeCasa}
+              name=""
+              id="casa"
+              placeholder="casa"
+            />
+            <input
+              type="text"
+              onChange={this.handleChangeFora}
+              name=""
+              id="fora"
+              placeholder="fora"
+            />
           </div>
 
           <div className="container-card">
-            <div className="txt">
-              <br />
+            <br />
+            <input
+              type="text"
+              onChange={this.handleChangeData}
+              name=""
+              id="data"
+              placeholder="Data"
+            />
+            <br />
+            <br />
+            <input
+              type="text"
+              onChange={this.handleChangeHorario}
+              name=""
+              id="horario"
+              placeholder="Horário"
+            />
+            <br />
+            <br />
+            <input
+              type="text"
+              onChange={this.handleChangeLocal}
+              name=""
+              id="local"
+              placeholder="Local"
+            />
+            <br />
 
-              <div className="caixa1">
-                <input type="text" onChange={this.handleChangeData} name="" id="data" placeholder="Data" />
-                
-              </div>
-              <br />
+            <Link onClick={this.handleSubmit} to="/rodada">
+              <button className="ok">Ok</button>
+            </Link>
 
-              <div className="caixa2">
-                <input type="text" onChange={this.handleChangeHorario} name="" id="horario" placeholder="Horário" />
-                
-              </div>
-              <br />
-
-              <div className="caixa3">
-                <input type="text" onChange={this.handleChangeLocal} name="" id="local" placeholder="Local" />
-               
-              </div>
-              <Link onClick={this.handleSubmit} to="/rodada">
-                <button className="ok">Ok</button>
-              </Link>
-              <button className="cancel">Cancelar</button>
-            </div>
+            <button className="cancel">Cancelar</button>
           </div>
-
-          <span></span>
         </div>
       </form>
     );

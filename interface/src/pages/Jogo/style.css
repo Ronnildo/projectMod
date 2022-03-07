@@ -12,14 +12,19 @@ body, html{
 .fut{
   position: relative;
   font-size: 35px;
-  left: 8%;
+  left: 10.5%;
   top: 50px;
 }
-.fut2{
-  position: absolute;
+.futtwo{
+  position: relative;
   font-size: 35px;
   left: 29%;
   top: 50px;
+  /*
+  position: absolute;
+  font-size: 35px;
+  left: 29%;
+  top: 50px;*/
 }
 .pen{
   position: relative;
@@ -44,8 +49,8 @@ body, html{
   position: relative;
   width: 55%;
   height: 215px;
-  left: 42%;
-  top: -100px;
+  left: 43%;
+  top: -55px;
 
   background: #5AADF1;
   border-radius: 10px;
@@ -57,7 +62,7 @@ body, html{
   position: relative;
   width: 80px;
   height: 35px;
-  left: 83%;
+  left: 68%;
   top: -25px;
 
   background: #FFFFFF;
@@ -92,7 +97,7 @@ body, html{
   position: relative;
   width: 80px;
   height: 35px;
-  left: 50%;
+  left: 67%;
   top: -25px;
 
   background: #FFFFFF;
@@ -138,9 +143,14 @@ body, html{
   border-radius: 5px;
   width: 50%;
 }
+
+.times{
+  margin-top: 25px;
+}
 #casa{
   position: relative;
-  left: 10%;
+  left: 5%;
+  top: 85px;
   transform: translate(-50%);
   padding: 10px;
   border: none;
@@ -153,6 +163,7 @@ body, html{
 #fora{
   position: relative;
   left: 10%;
+  top: 85px;
   transform: translate(-50%);
   padding: 10px;
   border: none;
@@ -162,7 +173,7 @@ body, html{
   width: 16%;
   background-color: rgb(189, 189, 189);
 }
-
+/*
 .time1{
   display: flex;
   position: relative;
@@ -174,13 +185,13 @@ body, html{
   position: relative;
   left: 21%;
   top: 45px;
-}
+}*/
 p{
   position: absolute;
   font-size: 25px;
   color: black;
-  top: 118px;
-  left: 19.5%;
+  top: 124px;
+  left: 21.9%;
 }
 .spa{
   position: absolute;
@@ -189,8 +200,3 @@ p{
   height: 7vh;
 }
 
-.linha{
-  background: yellow;
-  height: 50px;
-  width: 100%;
-}
