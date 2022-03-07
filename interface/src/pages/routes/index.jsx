@@ -2,8 +2,8 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { Home } from '../Home'
 import { Login } from '../Login'
 import  Register  from '../Register'
-import { Jogo } from '../Jogo'
-import { Cadast } from '../Cadast'
+import  Jogo  from '../Jogo'
+import  Cadast  from '../Cadast'
 
 export const AppRouter = () => {
     return(

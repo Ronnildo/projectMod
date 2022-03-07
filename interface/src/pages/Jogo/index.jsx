@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 //import { NavLink } from "react-router-dom";
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./style.css";
+import React from "react";
 
-export const Jogo = () => {
-  return (
+export default class Jogo extends React.Component {
+  render(){
+      return (
     <div>
       <span className="spa"></span>
 
@@ -62,4 +64,6 @@ export const Jogo = () => {
       </div>
     </div>
   );
+  }
+
 };
