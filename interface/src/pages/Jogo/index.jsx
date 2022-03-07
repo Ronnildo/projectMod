@@ -48,16 +48,18 @@ export default class Jogo extends React.Component {
   handleChangeFora = (event) => {
     this.setState({ fora: event.target.value });
   };
+  handleChangeData = (event) => {
+    this.setState({ data: event.target.value });
+  };
+  handleChangeData = (event) => {
+    this.setState({ data: event.target.value });
+  };
   handleChangeHorario = (event) => {
     this.setState({ horario: event.target.value });
   };
   handleChangeLocal = (event) => {
     this.setState({ local: event.target.value });
   };
-  handleChangeData = (event) => {
-    this.setState({ data: event.target.value });
-  };
-
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="">
@@ -98,7 +100,7 @@ export default class Jogo extends React.Component {
                 <input type="text" onChange={this.handleChangeLocal} name="" id="local" placeholder="Local" />
                
               </div>
-              <Link to="/rodada">
+              <Link onClick={this.handleSubmit} to="/rodada">
                 <button className="ok">Ok</button>
               </Link>
               <button className="cancel">Cancelar</button>
