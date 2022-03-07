@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
 import { LayoutComponents } from "../../components/LayoutComponents";
 import React from "react";
 import axios from "axios";
@@ -48,30 +48,32 @@ export default class Login extends React.Component {
           <div className="wrap-input">
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
             <input
+              id="email"
               //className={email !== "" ? "has-val input" : "input"}
               type="email"
               //value={"email"}
               onChange={this.handleChangeEmail}
+              placeholder="Email"
             />
-            <span className="focus-input" data-placeholder="Email"></span>
           </div>
-
+          <br />
           <div className="wrap-input">
             {/*se o valor for diferente de vazil vou adicionar has-val, se estiver vazil permaneça com o input*/}
             <input
+              id="password"
               //className={password !== "" ? "has-val input" : "input"}
               type="password"
               //value={"password"}
               onChange={this.handleChangePassword}
+              placeholder="Senha"
             />
-            <span className="focus-input" data-placeholder="Passaword"></span>
           </div>
-
+          <br />
           {/*div para o botão*/}
-          <div className="container-login-form-btn">
+          <Link to="/jogo">
             <button className="login-form-btn">Login</button>
-          </div>
-
+          </Link>
+          <br />
           {/*div (não possui conta?)*/}
           <div className="text">
             <span className="text1">Não possui conta?</span>
