@@ -37,8 +37,8 @@ body, html{
 .container{
   margin: 0 auto;
   position: absolute;
-  width: 72%;
-  height: 250px;
+  width: 75%;
+  height: 270px;
   left: 12%;
   top: 150px;
 
@@ -48,9 +48,9 @@ body, html{
 .container-card{
   position: relative;
   width: 55%;
-  height: 215px;
+  height: 250px;
   left: 43%;
-  top: -55px;
+  top: -62px;
 
   background: #5AADF1;
   border-radius: 10px;
@@ -63,7 +63,7 @@ body, html{
   width: 80px;
   height: 35px;
   left: 68%;
-  top: -25px;
+  top: 10px;
 
   background: #FFFFFF;
   border-radius: 10px;
@@ -98,7 +98,7 @@ body, html{
   width: 80px;
   height: 35px;
   left: 67%;
-  top: -25px;
+  top: 10px;
 
   background: #FFFFFF;
   border-radius: 10px;
@@ -109,6 +109,7 @@ body, html{
 .ok:hover{
   opacity: 0.8;
 }
+
 
 #horario{
   position: relative;
@@ -173,25 +174,13 @@ body, html{
   width: 16%;
   background-color: rgb(189, 189, 189);
 }
-/*
-.time1{
-  display: flex;
-  position: relative;
-  top: 81px;
-}
 
-.time2{
-  display: flex;
-  position: relative;
-  left: 21%;
-  top: 45px;
-}*/
-p{
+.x{
   position: absolute;
   font-size: 25px;
   color: black;
-  top: 124px;
-  left: 21.9%;
+  top: 127px;
+  left: 21.8%;
 }
 .spa{
   position: absolute;

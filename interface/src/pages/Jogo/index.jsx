@@ -70,7 +70,7 @@ export default class Jogo extends React.Component {
           <div className="times">
             <FaFutbol className="fut"></FaFutbol>
             <FaFutbol className="futtwo"></FaFutbol>
-            <p>X</p>
+            <p className="x">X</p>
             <input
               type="text"
               onChange={this.handleChangeCasa}
@@ -90,19 +90,19 @@ export default class Jogo extends React.Component {
           <div className="container-card">
             <br />
             <input
+              id="data"
               type="text"
               onChange={this.handleChangeData}
               name=""
-              id="data"
               placeholder="Data"
             />
             <br />
             <br />
             <input
+              id="horario"
               type="text"
               onChange={this.handleChangeHorario}
               name=""
-              id="horario"
               placeholder="Horário"
             />
             <br />
