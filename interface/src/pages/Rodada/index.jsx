@@ -40,13 +40,11 @@ export default class Rodada extends React.Component {
         </span>
 
         <div className="times">
-          <p id="casa">
-            {this.state.jogos.map((jogo) => (
-              <p>{jogo.casa}</p>
-            ))}
-          </p>
           <p>X</p>
-          <p id="fora">Fora</p>
+
+          <div id="time1">Casa</div>
+          
+          <div id="time2">Fora</div>
         </div>
 
         <form action="" className="containerss">
@@ -56,26 +54,22 @@ export default class Rodada extends React.Component {
           </div>
 
           <div className="formulario">
-            <p id="horario">
-              Horáiro
-              <button className="pen">
-                <FaPen></FaPen>
-              </button>
-            </p>
+            <div id="horario">
+              Horário
+              <button className="pen"><FaPen></FaPen></button>
+            </div>
             <br />
-            <p id="local">
+            
+            <div id="local">
               Local
-              <button className="pen2">
-                <FaPen></FaPen>
-              </button>
-            </p>
+              <button className="pen2"><FaPen></FaPen></button>
+            </div>
             <br />
-            <p id="data">
+
+            <div id="data">
               Data
-              <button className="pen3">
-                <FaPen></FaPen>
-              </button>
-            </p>
+              <button className="pen3"><FaPen></FaPen></button>
+            </div>
             <br />
 
             <button className="caddel">Deletar</button>

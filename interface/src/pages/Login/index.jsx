@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 //import { useState } from "react";
 import { LayoutComponents } from "../../components/LayoutComponents";
 import React from "react";
-import axios from "axios";
+//import axios from "axios";
 import authService from '../../services/auth';
 
 export default class Login extends React.Component {
@@ -24,7 +24,7 @@ export default class Login extends React.Component {
       let res = await authService.autheticate(data);
       console.log("res", res.data);
       authService.setLoggedUser(res.data);
-      this.props.history
+      
     } catch (err) {
       console.log(err);
       alert("Erro ao efetuar login")

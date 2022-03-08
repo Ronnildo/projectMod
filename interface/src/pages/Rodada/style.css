@@ -63,7 +63,7 @@ body, html{
 }
 
 .formulario{
-  margin-top: -75px;
+  margin-top: 200px;
 }
 .caddel{
   background: #5AADF1;
@@ -122,7 +122,7 @@ body, html{
   width: 35%;
 }
 
-#casa{
+#time1{
   z-index: 1;
   background-color: #b6b6b696;
   position: relative;
@@ -137,7 +137,7 @@ body, html{
   border-radius: 5px;
   width: 13%;
 }
-#fora{
+#time2{
   z-index: 1;
   background-color: #b6b6b696;
   position: relative;
@@ -166,7 +166,7 @@ left: 50%;
 .pen{
   z-index: 1;
   position: relative;
-  left: 76%;
+  left: 70%;
   top: 5px;
 
   cursor: pointer;
@@ -177,7 +177,7 @@ left: 50%;
 .pen2{
   z-index: 1;
   position: relative;
-  left: 79%;
+  left: 76%;
   top: 5px;
 
   font-size: 17px;
@@ -190,7 +190,7 @@ left: 50%;
 .pen3{
   z-index: 1;
   position: relative;
-  left: 80%;
+  left: 78%;
   top: 5px;
 
   font-size: 17px;
