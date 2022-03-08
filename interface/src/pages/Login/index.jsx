@@ -28,7 +28,6 @@ export default class Login extends React.Component {
         return err;
       }
     })
-    
   };
 
   handleChangeEmail = (event) => {
