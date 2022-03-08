@@ -5,7 +5,7 @@ const User = require("../models/User");
 class JogosController {
   async index(req, res) {
     const jogos = await Jogos.findAll({
-      attributes: ["casa", "fora", "data", "horario", "local"],
+      attributes: ["id","casa", "fora", "data", "horario", "local"],
     });
     return res.status(200).json(jogos);
   }

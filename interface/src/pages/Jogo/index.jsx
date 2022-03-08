@@ -17,7 +17,7 @@ export default class Jogo extends React.Component {
   };
 
   handleSubmit = async (event) => {
-    event.preventDefault();
+   // event.preventDefault();
 
     let url = "http://localhost:3333/jogos";
 
@@ -34,7 +34,7 @@ export default class Jogo extends React.Component {
       .post(url, data)
       .then((res) => {
         console.log(res);
-        console.log(res.data);
+        console.log(res.data[1]);
       })
       .catch((err) => {
         console.log(err);
