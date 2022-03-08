@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-//import { useState } from "react";
 import { LayoutComponents } from "../../components/LayoutComponents";
 import React from "react";
-//import axios from "axios";
-import authService from '../../services/auth';
+import axios from "axios";
 
 export default class Login extends React.Component {
   state = {
@@ -20,15 +18,16 @@ export default class Login extends React.Component {
       email: this.state.email,
       password: this.state.password,
     };
-    try {
-      let res = await authService.autheticate(data);
-      console.log("res", res.data);
-      authService.setLoggedUser(res.data);
-      
-    } catch (err) {
-      console.log(err);
-      alert("Erro ao efetuar login")
-    }
+    axios.post(url, data)
+    .then((res) => { 
+      console.log(res.data);
+      alert(res.statusText);
+    }).catch((err) => {
+      alert("Email/senha incorretos.");
+      if(err){
+        return err;
+      }
+    })
   };
 
   handleChangeEmail = (event) => {
