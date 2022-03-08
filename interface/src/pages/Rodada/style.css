@@ -166,7 +166,7 @@ left: 50%;
 .pen{
   z-index: 1;
   position: relative;
-  left: 70%;
+  left: 60%;
   top: 5px;
 
   cursor: pointer;
@@ -177,7 +177,7 @@ left: 50%;
 .pen2{
   z-index: 1;
   position: relative;
-  left: 76%;
+  left: 68%;
   top: 5px;
 
   font-size: 17px;
@@ -190,7 +190,7 @@ left: 50%;
 .pen3{
   z-index: 1;
   position: relative;
-  left: 78%;
+  left: 62%;
   top: 5px;
 
   font-size: 17px;

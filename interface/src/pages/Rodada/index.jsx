@@ -11,7 +11,7 @@ export default class Rodada extends React.Component {
     jogos: [],
   };
 
-  get() {
+  componentDidMount() {
     const url = "http://localhost:3333/jogos";
 
     axios
@@ -22,13 +22,24 @@ export default class Rodada extends React.Component {
         console.log(jogos);
       })
       .catch((err) => {
-        if(err.response){
-          console.log(err.response.data);
-          window.alert("Email/senha incorretos")
-        }
-        console.log(err.res);
+        console.log(err);
       });
   }
+
+  handleDelete = (event) => {
+    event.preventDefault();
+
+    const url = "http://localhost:3333/jogos";
+
+    axios
+      .delete(url + `${this.state.jogos.map((jogo) => jogo.id)}`)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   render() {
     return (
@@ -42,9 +53,9 @@ export default class Rodada extends React.Component {
         <div className="times">
           <p>X</p>
 
-          <div id="time1">Casa</div>
-          
-          <div id="time2">Fora</div>
+          <div id="time1">{this.state.jogos.map((jogo) => jogo.casa)}</div>
+
+          <div id="time2">{this.state.jogos.map((jogo) => jogo.fora)}</div>
         </div>
 
         <form action="" className="containerss">
@@ -55,24 +66,32 @@ export default class Rodada extends React.Component {
 
           <div className="formulario">
             <div id="horario">
-              Horário
-              <button className="pen"><FaPen></FaPen></button>
+              {this.state.jogos.map((jogo) => jogo.data)}
+              <button className="pen">
+                <FaPen></FaPen>
+              </button>
             </div>
             <br />
-            
+
             <div id="local">
-              Local
-              <button className="pen2"><FaPen></FaPen></button>
+              {this.state.jogos.map((jogo) => jogo.horario)}
+              <button className="pen2">
+                <FaPen></FaPen>
+              </button>
             </div>
             <br />
 
             <div id="data">
-              Data
-              <button className="pen3"><FaPen></FaPen></button>
+              {this.state.jogos.map((jogo) => jogo.local)}
+              <button className="pen3">
+                <FaPen></FaPen>
+              </button>
             </div>
             <br />
-
-            <button className="caddel">Deletar</button>
+            <div>
+                <button onSubmit={this.handleDelete} 
+                className="caddel">Deletar</button>
+            </div>
           </div>
         </form>
       </div>
